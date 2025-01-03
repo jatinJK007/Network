@@ -37,8 +37,8 @@ class MainActivity : AppCompatActivity() {
             tvTitle.visibility = View.GONE
         }
 //        getRequest()
-//        postRequest()
-        postFRequest()
+        postRequest()
+//        postFRequest()
 
 
     }
@@ -51,7 +51,7 @@ class MainActivity : AppCompatActivity() {
                 Instance.api.fpostreq(23,"hello","hjmahdajdajdhaja")
 
             } catch (e: HttpException) {
-                Toast.makeText(applicationContext, "http Error${e.message}", Toast.LENGTH_LONG)
+                Toast.makeText(applicationContext, "http network Error${e.message}", Toast.LENGTH_LONG)
                     .show()
                 return@launch
             } catch (e: IOException) {
