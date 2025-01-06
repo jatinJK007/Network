@@ -37,12 +37,12 @@ class MainActivity : AppCompatActivity() {
             tvTitle.visibility = View.GONE
         }
 //        getRequest()
-        postRequest()
+//        postRequest()
 //        postFRequest()
+//        soon adding a recycler view to display the data in a format and adding detailed component to app with use of fragment
 
 
     }
-
 
     private fun postFRequest() {
         GlobalScope.launch(Dispatchers.IO) {
@@ -59,8 +59,6 @@ class MainActivity : AppCompatActivity() {
                     .show()
                 return@launch
             }
-
-
             if (response.isSuccessful && response.body() != null) {
                 withContext(Dispatchers.Main) {
                     Log.d("TAG", "data load ok")
